@@ -9,9 +9,9 @@ variable cidr_block {
   description = "cidr of resource"
 }
 
-variable rspath_aws_vpc {
+variable vpc_id {
   type        = string
-  description = "remote state path for aws_vpc"
+  description = "vpc_id for subnet"
 }
 
 variable outpost_arn {

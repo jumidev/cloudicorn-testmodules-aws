@@ -1,14 +1,5 @@
-data "terraform_remote_state" "aws_vpc" {
-  backend = "local"
-
-  config = {
-    path = "${var.rspath_aws_vpc}/terraform.tfstate"
-  }
-}
-
-
 resource "aws_subnet" "this" {
-  vpc_id                          = data.terraform_remote_state.aws_vpc.outputs.id
+  vpc_id                          = var.vpc_id
   availability_zone               = var.availability_zone 
 
   cidr_block                      = var.cidr_block

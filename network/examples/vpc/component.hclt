@@ -1,5 +1,5 @@
-terraform {
-  source = "${TF_MODULES_ROOT}/network/vpc"
+source {
+	path = "${TF_MODULES_ROOT}/network/vpc"
 }
 inputs {
   name = "example vpc"

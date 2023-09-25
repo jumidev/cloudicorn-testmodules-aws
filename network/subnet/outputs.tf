@@ -31,5 +31,5 @@ output "owner_id" {
 }
 
 output "assign_ipv6_address_on_creation" {
-  value = aws_subnet.this.enable_dns_hostnames
+  value = aws_subnet.this.assign_ipv6_address_on_creation
 }
